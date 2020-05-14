@@ -1,0 +1,151 @@
+/* Inspired by https://codepen.io/valreyesg/pen/zzjgoz */
+
+body {
+  background: gray;
+}
+
+.box {
+  position: relative;
+  margin: auto;
+  display: block;
+  margin-top: 4%;
+  width: 600px;
+  height: 600px;
+}
+
+.ear-left, .ear-right {
+  position: absolute;
+  width: 40%;
+  height: 30%;
+  background: #DEB887;
+  -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  transform: rotate(-40deg);
+}
+
+.ear-right {
+  right: 0;
+  transform: rotate(40deg);
+}
+
+.inner-left {
+  position: absolute;
+  width: 30%;
+  height: 20%;
+  left: 7%;
+  top: 8%;
+  background: #CD853F;
+  -webkit-clip-path: polygon( 50% 0%, 0% 100%, 100% 100%);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  transform: rotate(-40deg);
+}
+
+.inner-right {
+  position: absolute;
+  width: 30%;
+  height: 20%;
+  right: 7%;
+  top: 8%;
+  background: #CD853F;
+  -webkit-clip-path: polygon( 50% 0%, 0% 100%, 100% 100%);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  transform: rotate(40deg);
+}
+
+.head {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  background: #DEB887;
+  top: 10%;
+  left: 10%;
+  border: 1px solid #8B4513;
+}
+
+.top-head {
+  position: absolute;
+  left: 19%;
+  width: 0;
+  height: 0;
+  border-left: 150px solid transparent;
+  border-right: 150px solid transparent;
+  border-top: 150px solid #8B4513;
+  border-radius: 50%;
+}
+
+.eye-left, .eye-right {
+  position: absolute;
+  width: 12%;
+  height: 12%;
+  top: 43%;
+  left: 17%;
+  background: black;
+  border-radius: 50%;
+}
+
+.eye-right {
+  right: 17%;
+  left: auto;
+}
+
+.inner-eye {
+  position: absolute;
+  width: 75%;
+  height: 75%;
+  top: 12.5%;
+  left: 12.5%;
+  background: white;
+  border-radius: 50%;
+}
+
+.eyebrow-left {
+  position: absolute;
+  width: 27%;
+  height: 5%;
+  top: 40%;
+  left: 10%;
+  background:#8B4513;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.eyebrow-right {
+  position: absolute;
+  width: 27%;
+  height: 5%;
+  top: 40%;
+  right: 10%;
+  background:#8B4513;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.mouth {
+  position: absolute;
+  left: calc((100% - 38%)/2);
+  top: 67%;
+  width: 38%;
+  height: 28%;
+  background: #8B0000;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.mouth::before, .mouth::after {
+  content: "";
+  position: absolute;
+  top: 5%;
+  border-top: 25px solid white;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+}
+
+.mouth::before {
+  left: 15%;
+}
+
+.mouth::after {
+  right: 15%;
+}
